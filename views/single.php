@@ -31,24 +31,24 @@ $nextPost = get_next_post();
                                     <div class="careers-params">
 										<div class="col-sm-4"> 
 											<?php
-											echo '<p>' . __( 'Posted', 'yolo' ) . ': ' . get_the_date( 'd/m/Y' ) . '</p>';
+											echo '<p>' . __( 'Posted', 'fw' ) . ': ' . get_the_date( 'd/m/Y' ) . '</p>';
 											$career_expired = fw_get_db_post_option( get_the_ID(), 'post_career_param' )['career_expired'];
-											echo ( ! empty( $career_expired ) ) ? '<p>' . __( 'Expired Time', 'yolo' ) . ': ' . $career_expired . '</p>' : '<p>' . __( 'Expired Time', 'yolo' ) . ': ' . __( 'Unlimited', 'yolo' ) . '</p>';
+											echo ( ! empty( $career_expired ) ) ? '<p>' . __( 'Expired Time', 'fw' ) . ': ' . $career_expired . '</p>' : '<p>' . __( 'Expired Time', 'fw' ) . ': ' . __( 'Unlimited', 'fw' ) . '</p>';
 											?>
 										</div>
 										<div class="col-sm-4">
 											<?php
 											$career_number = fw_get_db_post_option( get_the_ID(), 'post_career_param' )['career_number'];
-											echo ( ! empty( $career_number ) ) ? '<p>' . __( 'Job Number', 'yolo' ) . ': ' . $career_number . '</p>' : '<p>' . __( 'Job Number', 'yolo' ) . ': ' . __( 'Various', 'yolo' ) . '</p>';
+											echo ( ! empty( $career_number ) ) ? '<p>' . __( 'Job Number', 'fw' ) . ': ' . $career_number . '</p>' : '<p>' . __( 'Job Number', 'fw' ) . ': ' . __( 'Various', 'fw' ) . '</p>';
 											$career_location = fw_get_db_post_option( get_the_ID(), 'post_career_param' )['career_location'];
-											echo ( ! empty( $career_location ) ) ? '<p>' . __( 'Location', 'yolo' ) . ': ' . $career_location . '</p>' : '<p>' . __( 'Location', 'yolo' ) . ': ' . __( 'Contact', 'yolo' ) . '</p>';
+											echo ( ! empty( $career_location ) ) ? '<p>' . __( 'Location', 'fw' ) . ': ' . $career_location . '</p>' : '<p>' . __( 'Location', 'fw' ) . ': ' . __( 'Contact', 'fw' ) . '</p>';
 											?> 
 										</div> 
 										<div class="col-sm-4">
 											<?php
 											$career_exp = fw_get_db_post_option( get_the_ID(), 'post_career_param' )['career_exp'];
-											echo ( ! empty( $career_exp ) ) ? '<p>' . __( 'Years’ Experience', 'yolo' ) . ': ' . $career_exp . '</p>' : '<p>' . __( 'Years’ Experience', 'yolo' ) . ': ' . __( 'All', 'yolo' ) . '</p>';
-											echo '<p class="post-cat" title="' . __( 'Post in category', 'yolo' ) . '">' . $term_list . '</p>';
+											echo ( ! empty( $career_exp ) ) ? '<p>' . __( 'Years’ Experience', 'fw' ) . ': ' . $career_exp . '</p>' : '<p>' . __( 'Years’ Experience', 'fw' ) . ': ' . __( 'All', 'fw' ) . '</p>';
+											echo '<p class="post-cat" title="' . __( 'Post in category', 'fw' ) . '">' . $term_list . '</p>';
 											?> 
 										</div>
                                     </div>
@@ -57,7 +57,7 @@ $nextPost = get_next_post();
                                     <?php
                                     the_content();
                                     wp_link_pages( array(
-	                                    'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'yolo' ) . '</span>',
+	                                    'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'fw' ) . '</span>',
 	                                    'after'       => '</div>',
 	                                    'link_before' => '<span>',
 	                                    'link_after'  => '</span>',
@@ -73,13 +73,13 @@ $nextPost = get_next_post();
                                 <?php if ( $prevPost ) { ?>
                                     <li class="previous">
                                     <?php $prevthumbnail = get_the_post_thumbnail( $prevPost->ID, array( 80, 80 ) ); ?>
-                                    <?php previous_post_link( '%link', $prevthumbnail . '<div><div class="icon"><span class="ion-ios-arrow-thin-left"></span> ' . __( 'Previous', 'yolo' ) . '</div> <div class="title">%title</div></div>' ); ?>
+                                    <?php previous_post_link( '%link', $prevthumbnail . '<div><div class="icon"><span class="ion-ios-arrow-thin-left"></span> ' . __( 'Previous', 'fw' ) . '</div> <div class="title">%title</div></div>' ); ?>
                                 </li>
                                 <?php }
                                 if ( $nextPost ) { ?>
                                     <li class="next">
                                     <?php $nextthumbnail = get_the_post_thumbnail( $nextPost->ID, array( 80, 80 ) ); ?>
-                                    <?php next_post_link( '%link', $nextthumbnail . '<div><div class="icon">' . __( 'Next', 'yolo' ) . ' <span class="ion-ios-arrow-thin-right"></span></div> <div class="title">%title</div></div>' ); ?>
+                                    <?php next_post_link( '%link', $nextthumbnail . '<div><div class="icon">' . __( 'Next', 'fw' ) . ' <span class="ion-ios-arrow-thin-right"></span></div> <div class="title">%title</div></div>' ); ?>
                                 </li>
                                 <?php } ?>
                             </ul>

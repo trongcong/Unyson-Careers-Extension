@@ -79,28 +79,28 @@ class FW_Extension_Careers extends FW_Extension {
 	public function _action_register_post_type() {
 
 		$post_names = apply_filters( 'fw_ext_works_post_type_name', array(
-			'singular' => __( 'Work', 'yolo' ),
-			'plural'   => __( 'Works', 'yolo' )
+			'singular' => __( 'Work', 'fw' ),
+			'plural'   => __( 'Works', 'fw' )
 		) );
 
 		register_post_type( $this->post_type, array(
 			'labels'             => array(
-				'name'               => $post_names['plural'], //__( 'Careers', 'yolo' ),
-				'singular_name'      => $post_names['singular'], //__( 'Careers work', 'yolo' ),
-				'add_new'            => __( 'Add New', 'yolo' ),
-				'add_new_item'       => sprintf( __( 'Add New %s', 'yolo' ), $post_names['singular'] ),
-				'edit'               => __( 'Edit', 'yolo' ),
-				'edit_item'          => sprintf( __( 'Edit %s', 'yolo' ), $post_names['singular'] ),
-				'new_item'           => sprintf( __( 'New %s', 'yolo' ), $post_names['singular'] ),
-				'all_items'          => sprintf( __( 'All %s', 'yolo' ), $post_names['plural'] ),
-				'view'               => sprintf( __( 'View %s', 'yolo' ), $post_names['singular'] ),
-				'view_item'          => sprintf( __( 'View %s', 'yolo' ), $post_names['singular'] ),
-				'search_items'       => sprintf( __( 'Search %s', 'yolo' ), $post_names['plural'] ),
-				'not_found'          => sprintf( __( 'No %s Found', 'yolo' ), $post_names['plural'] ),
-				'not_found_in_trash' => sprintf( __( 'No %s Found In Trash', 'yolo' ), $post_names['plural'] ),
+				'name'               => $post_names['plural'], //__( 'Careers', 'fw' ),
+				'singular_name'      => $post_names['singular'], //__( 'Careers work', 'fw' ),
+				'add_new'            => __( 'Add New', 'fw' ),
+				'add_new_item'       => sprintf( __( 'Add New %s', 'fw' ), $post_names['singular'] ),
+				'edit'               => __( 'Edit', 'fw' ),
+				'edit_item'          => sprintf( __( 'Edit %s', 'fw' ), $post_names['singular'] ),
+				'new_item'           => sprintf( __( 'New %s', 'fw' ), $post_names['singular'] ),
+				'all_items'          => sprintf( __( 'All %s', 'fw' ), $post_names['plural'] ),
+				'view'               => sprintf( __( 'View %s', 'fw' ), $post_names['singular'] ),
+				'view_item'          => sprintf( __( 'View %s', 'fw' ), $post_names['singular'] ),
+				'search_items'       => sprintf( __( 'Search %s', 'fw' ), $post_names['plural'] ),
+				'not_found'          => sprintf( __( 'No %s Found', 'fw' ), $post_names['plural'] ),
+				'not_found_in_trash' => sprintf( __( 'No %s Found In Trash', 'fw' ), $post_names['plural'] ),
 				'parent_item_colon'  => '' /* text for parent types */
 			),
-			'description'        => __( 'Create a careers item', 'yolo' ),
+			'description'        => __( 'Create a careers item', 'fw' ),
 			'public'             => true,
 			'show_ui'            => true,
 			'show_in_menu'       => true,
@@ -148,22 +148,22 @@ class FW_Extension_Careers extends FW_Extension {
 	public function _action_register_taxonomy() {
 
 		$category_names = apply_filters( 'fw_ext_careers_category_name', array(
-			'singular' => __( 'Field', 'yolo' ),
-			'plural'   => __( 'Fields Of Work', 'yolo' )
+			'singular' => __( 'Field', 'fw' ),
+			'plural'   => __( 'Fields Of Work', 'fw' )
 		) );
 
 		register_taxonomy( $this->taxonomy_name, $this->post_type, array(
 			'labels'            => array(
-				'name'              => sprintf( _x( 'Careers %s', 'taxonomy general name', 'yolo' ), $category_names['plural'] ),
-				'singular_name'     => sprintf( _x( 'Careers %s', 'taxonomy singular name', 'yolo' ), $category_names['singular'] ),
-				'search_items'      => sprintf( __( 'Search %s', 'yolo' ), $category_names['plural'] ),
-				'all_items'         => sprintf( __( 'All %s', 'yolo' ), $category_names['plural'] ),
-				'parent_item'       => sprintf( __( 'Parent %s', 'yolo' ), $category_names['singular'] ),
-				'parent_item_colon' => sprintf( __( 'Parent %s:', 'yolo' ), $category_names['singular'] ),
-				'edit_item'         => sprintf( __( 'Edit %s', 'yolo' ), $category_names['singular'] ),
-				'update_item'       => sprintf( __( 'Update %s', 'yolo' ), $category_names['singular'] ),
-				'add_new_item'      => sprintf( __( 'Add New %s', 'yolo' ), $category_names['singular'] ),
-				'new_item_name'     => sprintf( __( 'New %s Name', 'yolo' ), $category_names['singular'] ),
+				'name'              => sprintf( _x( 'Careers %s', 'taxonomy general name', 'fw' ), $category_names['plural'] ),
+				'singular_name'     => sprintf( _x( 'Careers %s', 'taxonomy singular name', 'fw' ), $category_names['singular'] ),
+				'search_items'      => sprintf( __( 'Search %s', 'fw' ), $category_names['plural'] ),
+				'all_items'         => sprintf( __( 'All %s', 'fw' ), $category_names['plural'] ),
+				'parent_item'       => sprintf( __( 'Parent %s', 'fw' ), $category_names['singular'] ),
+				'parent_item_colon' => sprintf( __( 'Parent %s:', 'fw' ), $category_names['singular'] ),
+				'edit_item'         => sprintf( __( 'Edit %s', 'fw' ), $category_names['singular'] ),
+				'update_item'       => sprintf( __( 'Update %s', 'fw' ), $category_names['singular'] ),
+				'add_new_item'      => sprintf( __( 'Add New %s', 'fw' ), $category_names['singular'] ),
+				'new_item_name'     => sprintf( __( 'New %s Name', 'fw' ), $category_names['singular'] ),
 				'menu_name'         => $category_names['plural'],
 			),
 			'public'            => true,
@@ -180,8 +180,8 @@ class FW_Extension_Careers extends FW_Extension {
 
 		if ( apply_filters( 'fw:ext:careers:enable-tags', false ) ) {
 			$tag_names = apply_filters( 'fw_ext_careers_tag_name', array(
-				'singular' => __( 'Tag', 'yolo' ),
-				'plural'   => __( 'Tags', 'yolo' )
+				'singular' => __( 'Tag', 'fw' ),
+				'plural'   => __( 'Tags', 'fw' )
 			) );
 
 			register_taxonomy( $this->taxonomy_tag_name, $this->post_type, array(
@@ -189,18 +189,18 @@ class FW_Extension_Careers extends FW_Extension {
 				'labels'       => array(
 					'name'                       => $tag_names['plural'],
 					'singular_name'              => $tag_names['singular'],
-					'search_items'               => sprintf( __( 'Search %s', 'yolo' ), $tag_names['plural'] ),
-					'popular_items'              => sprintf( __( 'Popular %s', 'yolo' ), $tag_names['plural'] ),
-					'all_items'                  => sprintf( __( 'All %s', 'yolo' ), $tag_names['plural'] ),
+					'search_items'               => sprintf( __( 'Search %s', 'fw' ), $tag_names['plural'] ),
+					'popular_items'              => sprintf( __( 'Popular %s', 'fw' ), $tag_names['plural'] ),
+					'all_items'                  => sprintf( __( 'All %s', 'fw' ), $tag_names['plural'] ),
 					'parent_item'                => null,
 					'parent_item_colon'          => null,
-					'edit_item'                  => sprintf( __( 'Edit %s', 'yolo' ), $tag_names['singular'] ),
-					'update_item'                => sprintf( __( 'Update %s', 'yolo' ), $tag_names['singular'] ),
-					'add_new_item'               => sprintf( __( 'Add New %s', 'yolo' ), $tag_names['singular'] ),
-					'new_item_name'              => sprintf( __( 'New %s Name', 'yolo' ), $tag_names['singular'] ),
-					'separate_items_with_commas' => sprintf( __( 'Separate %s with commas', 'yolo' ), strtolower( $tag_names['plural'] ) ),
-					'add_or_remove_items'        => sprintf( __( 'Add or remove %s', 'yolo' ), strtolower( $tag_names['plural'] ) ),
-					'choose_from_most_used'      => sprintf( __( 'Choose from the most used %s', 'yolo' ), strtolower( $tag_names['plural'] ) ),
+					'edit_item'                  => sprintf( __( 'Edit %s', 'fw' ), $tag_names['singular'] ),
+					'update_item'                => sprintf( __( 'Update %s', 'fw' ), $tag_names['singular'] ),
+					'add_new_item'               => sprintf( __( 'Add New %s', 'fw' ), $tag_names['singular'] ),
+					'new_item_name'              => sprintf( __( 'New %s Name', 'fw' ), $tag_names['singular'] ),
+					'separate_items_with_commas' => sprintf( __( 'Separate %s with commas', 'fw' ), strtolower( $tag_names['plural'] ) ),
+					'add_or_remove_items'        => sprintf( __( 'Add or remove %s', 'fw' ), strtolower( $tag_names['plural'] ) ),
+					'choose_from_most_used'      => sprintf( __( 'Choose from the most used %s', 'fw' ), strtolower( $tag_names['plural'] ) ),
 				),
 				'public'       => true,
 				'show_ui'      => true,
@@ -220,7 +220,7 @@ class FW_Extension_Careers extends FW_Extension {
 
 		foreach ( $menu as $key => $menu_item ) {
 			if ( $menu_item[2] == 'edit.php?post_type=' . $this->post_type ) {
-				$menu[ $key ][0] = __( 'Careers', 'yolo' );
+				$menu[ $key ][0] = __( 'Careers', 'fw' );
 			}
 		}
 	}
@@ -244,7 +244,7 @@ class FW_Extension_Careers extends FW_Extension {
 		$terms = get_terms( $this->taxonomy_name );
 
 		if ( empty( $terms ) || is_wp_error( $terms ) ) {
-			echo '<select name="' . $this->get_name() . '-filter-by-careers-category"><option value="0">' . __( 'View all categories', 'yolo' ) . '</option></select>';
+			echo '<select name="' . $this->get_name() . '-filter-by-careers-category"><option value="0">' . __( 'View all categories', 'fw' ) . '</option></select>';
 
 			return;
 		}
@@ -256,7 +256,7 @@ class FW_Extension_Careers extends FW_Extension {
 			'selected'        => $id,
 			'name'            => $this->get_name() . '-filter-by-careers-category">',
 			'taxonomy'        => $this->taxonomy_name,
-			'show_option_all' => __( 'View all categories', 'yolo' ),
+			'show_option_all' => __( 'View all categories', 'fw' ),
 			'hide_empty'      => true,
 			'hierarchical'    => 1,
 			'show_count'      => 0,
